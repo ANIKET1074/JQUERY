@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Syntax of Jquery</title>
+
+    <script src="/jquery.js"></script>
+    <style>
+        .container{
+            display: flex;
+            margin: 30px;
+            justify-content: center;
+         
+        }
+        #box-1{
+        border: 2px solid black;
+        background-color: rgb(252, 115, 209);
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        margin: 20px 20px;
+        padding: 30px 30px;
+
+
+    }
+        #box-2{
+        border: 2px solid black;
+        background-color: rgb(95, 246, 115);
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        margin: 20px 20px;
+        padding: 30px 30px;
+
+    }
+    
+    </style>
+    
+</head>
+<body>
+    <h2>Jquery Tutorial for Syntax</h2>
+    <div class="container">
+
+        <div id="box-1">
+            <h3>This is Box 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, molestias Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores rem possimus, aliquam nobis ipsum incidunt reprehenderit inventore corporis recusandae porro!</p>
+        </div>
+    
+        <div id="box-2">
+            <h3>This is Box 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis recusandae ex hic quis dolore exercitationem deserunt quaerat ut pariatur omnis!</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            let a = $("#box-1").html();
+            console.log(a);
+
+            let b = $("#box-2").html();
+            console.log(b);
+        })
+    </script>
+</body>
+</html>
