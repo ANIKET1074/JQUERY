@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set method</title>
+    <style>
+        #box{
+            border: 2px solid red;
+            padding: 10px;
+            background-color: pink;
+
+        }
+        .cls{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Set method in JQuery</h1>
+
+    <div id="box">
+        <h2>Test box</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, officia.</p>
+
+    </div>
+    <br>
+    <button id="btn">Set Value</button>
+
+    <script src="/jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('#box h2').text("Hello Aniket");
+                $('#box p').html("This <b>is new</b> Text");
+                $('#box h2').attr("class",'cls');
+
+
+            });
+        });
+
+        /*
+        For setting the value we use val() method 
+        val is used in the form type as input element 
+        it can be used as $(idname).val(set the value of it).
+        */
+    </script>
+
+</body>
+</html>
