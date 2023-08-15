@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Methods in JQuery</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <h2>Slide Methods in JQuery</h2>
+    <div id="box">
+        <h3>Test box</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor at illum nesciunt veritatis iste, earum odit nobis optio quam odio.</p>
+
+    </div>
+
+    <br>
+
+    <button id="slideupbtn">SlideUp</button>
+    <button id="slidedownbtn">SlideDown</button>
+    <button id="slidetogglebtn">SlideToggle</button>
+    
+    
+    <script src="/jquery.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('#slideupbtn').click(function(){
+                $('#box').slideUp(2000,function(){
+                    console.log("This is hidden")
+                });
+            });
+
+            $('#slidedownbtn').click(function(){
+                $('#box').slideDown(2000,function(){
+                    console.log("This is shown")
+                });
+            });
+
+            $('#slidetogglebtn').click(function(){
+                $('#box').slideToggle(1000,function(){
+                    console.log("Toggle")
+                });
+            });
+        });
+    </script>
+</body>
+</html>
