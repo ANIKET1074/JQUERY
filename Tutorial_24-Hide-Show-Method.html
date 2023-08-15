@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show Method</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h2>Hide and Show Method</h2>
+    <div id="box">
+        <h2>test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eveniet nesciunt hic consectetur molestiae necessitatibus numquam nihil optio voluptates distinctio.</p>
+
+    </div>
+    <br>
+    <button id="hidebtn">Hide</button>
+    <button id="showbtn">Show</button>
+    <button id="togglebtn">Toggle</button>
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#hidebtn').click(function(){
+                $('#box').hide("slow",function(){
+                    console.log("Now it is hidden!")
+                }); //here we give the value in milliseconds also
+            });
+            $('#showbtn').click(function(){
+                $('#box').show("slow",function(){
+                    console.log("Now it is Shown!")
+                });
+            });
+            $('#togglebtn').click(function(){
+                $('#box').toggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>
