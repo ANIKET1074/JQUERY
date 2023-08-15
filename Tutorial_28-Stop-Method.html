@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Stop Method</title>
+    <style>
+        #box{
+            border: 2px solid black;
+            background-color: bisque;
+            width: 150px;
+            height: 100px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h3>JQuery Stop Method</h3>
+    <div id="box">
+        <h2>Test box</h2>
+    </div>
+
+    <br>
+    <button id="animatebtn">Animate</button>
+    <button id="stopbtn">Stop</button>
+
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#animatebtn').click(function(){
+                $('#box').animate({left:'200px'},2000)
+                $('#box').animate({fontSize:'20px'},2000)
+            });
+            $('#stopbtn').click(function(){
+                // It will stop only first animation
+                // $('#box').stop(true);
+                // it will go to last position of the animation without any animation                                       
+                
+                $('#box').stop(true,true);
+            });
+        });
+    </script>
+</body>
+</html>
