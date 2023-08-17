@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery has() & is() method</title>
+    <style>
+        #box{
+            border: 2px solid salmon;
+            background-color: bisque;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JQuery has() & is() method</h2>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit. Porro, sint!</b>Lorem ipsum dolor sit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit nisi facere obcaecati modi.</p>
+    </div>
+
+    <ul>
+        <li>Orange</li>
+        <li><span>Apple</span></li>
+        <li>Grapes</li>
+        <li>Banana</li>
+    </ul>
+
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consequuntur recusandae nihil aspernatur inventore vitae.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing <span class="test">elit. Et quam explicabo iste!</span></p>
+
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('p').has('span,b').css('background','gold')
+            // $('p').has('.test').css('background','gold')
+
+            // is() method is used in if else to check  the condition and return the answer true and false 
+           $('p').click(function(){
+               if ($(this).parent().is('div')) {
+                   $(this).css('background','gold')
+               }
+
+           });
+        });
+    </script>
+</body>
+</html>
