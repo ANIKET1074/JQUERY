@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Filtering Method</title>
+    <style>
+        #first{
+            border: 2px solid rgb(255, 153, 0);
+            background-color: antiquewhite;
+            padding: 10px 10px;
+        }
+        #second{
+            border: 2px solid blueviolet;
+            background-color: violet;
+            padding: 10px 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        list of filtering Methods
+        1) first()
+        2) last()
+        3) eq()
+        4) filter()
+        5) not()
+        6) slice()
+     -->
+    <h2>JQuery Filtering Method</h2>
+    <div id="first">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, cumque.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus commodi exercitationem sit officiis explicabo adipisci?</p>
+    </div>
+    <ul>
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    <div id="second">
+        <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus quaerat aliquid fugiat impedit, enim odio!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, accusantium.</p>
+    </div>
+
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // It targets the first p tag in the body
+            // if we specify the div p tag then it indicates first p tag of the div tag
+            // $('#second p').first().css('background','red')
+
+            // It is the reverse of the first
+            // $('ul li').last().css('background','red')
+
+            // $('ul li').eq(2).css('background','red')
+
+            // $('p').filter('.test').css('background','red')
+            
+            // $('p').not('.test').css('background','red')
+
+            $('ul li').slice(1).css('background','red')
+
+
+        });
+    </script>
+</body>
+</html>
