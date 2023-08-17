@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Siblings Method</title>
+    <style>
+        #outer {
+            border: 2px solid rgb(255, 113, 5);
+            background-color: rgb(228, 188, 135);
+            padding: 10px 10px;
+            width: 650px;
+            height: 350px;
+
+        }
+
+        #inner {
+            border: 2px solid rgb(245, 0, 143);
+            background-color: rgb(228, 135, 203);
+            padding: 10px 10px;
+            width: 600px;
+            height: 250px;
+
+
+        }
+
+        #inner div {
+            border: 2px solid rgb(1, 250, 5);
+            background-color: aquamarine;
+            padding: 5px 5px;
+            display: inline-block;
+            width: 70px;
+            height: 100px;
+            text-align: center;
+            margin: 0px 15px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Sibling Method are used for children having same Parent
+      1) siblings()
+      2) next()
+      3) nextAll()
+      4) nextUntil()
+      5) prev()
+      6) prevAll()
+      7) prevUntil() 
+    -->
+    <h2>JQuery Siblings Method</h2>
+    <div id="outer">
+        <h2>Outer</h2>
+        <div id="inner">
+            <h2>Inner</h2>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-c">C</div>
+            <div>D</div>
+            <div>E</div>
+        </div>
+    </div>
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            // for targetting specific sibling we can pass it into the siblings method
+            // $('#child-c').siblings().css('background','purple')
+
+            // It target next sibling to the given element
+            // $('#child-c').next().css('background','purple')
+
+            // It target next all sibling to the given element
+            // $('#child-c').nextAll().css('background','purple')
+
+            //It target all the elements which is between the given two elements
+            // $('#child-c').nextUntil().css('background','purple')
+
+
+            // $('#child-c').prevUntil().css('background','purple')
+
+
+        });
+    </script>
+</body>
+
+</html>
