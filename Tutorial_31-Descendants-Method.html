@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Descendants Method</title>
+
+    <style>
+        #main-outer {
+            border: 2px solid purple;
+            background-color: plum;
+            padding: 10px 10px;
+            width: 700px;
+            height: 700px;
+            /* position: relative; */
+        }
+
+        #outer {
+            border: 2px solid rgb(255, 113, 5);
+            background-color: rgb(228, 188, 135);
+            padding: 10px 10px;
+            width: 650px;
+            height: 600px;
+
+        }
+
+        #inner {
+            border: 2px solid rgb(245, 0, 143);
+            background-color: rgb(228, 135, 203);
+            padding: 10px 10px;
+            width: 600px;
+            height: 500px;
+           
+
+        }
+
+        #inner div{
+            border: 2px solid rgb(1, 250, 5);
+            background-color: aquamarine;
+            padding: 5px 5px;
+            display: inline-block;
+            width: 70px;
+            height: 100px;
+            text-align: center;
+            margin: 0px 15px;
+
+        }
+        </style>
+</head>
+<body>
+    <!-- Descendants Method are used for child , grandchild , great-grandchild -->
+    <!-- In this there are two methods
+         1) children
+         2) find
+         -->
+    <h2>JQuery Descendants Method</h2>
+    <div id="main-outer">
+        <h2>Main Outer</h2>
+        <div id="outer">
+            <h2>Outer</h2>
+            <div id="inner">
+                <h2>Inner</h2>
+                <div>A</div>
+                <div>B</div>
+                <div class="test">C</div>
+                <div>D</div>
+            </div>
+        </div>
+    </div>
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // $('#inner').children().css('background','red')
+
+            // Find method targets all his children and grand children and great-grandchildren
+            $('#main-outer').find('.test').css('background','red');
+        });
+    </script>
+</body>
+</html>
