@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Stoppropogation event</title>
+    <style>
+        #box{
+            border: 2px solid brown;
+            background-color: burlywood;
+            width: 400px;
+            height: 200px;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JQuery Stop-propogation event</h1>
+    <div id="box">
+        <h2>Test Box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum architecto ipsa aperiam explicabo pariatur obcaecati ratione harum numquam rem veniam? Architecto optio quis aliquid sapiente.</p>
+
+        <button id="testbtn">Test Button</button>
+    </div>
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#box').click(function(){
+                alert('The div element is clicked')
+            });
+            $('h2').click(function(){
+                alert('The h2 element is clicked')
+            });
+            $('p').click(function(e){
+                e.stopPropagation();       // it is use to stop the event bubbling
+                alert('The h2 element is clicked: ' + e.isPropagationStopped()) // ispropagation method is use to check that whether stoppropagation method is use or not
+            });
+            $('h2').click(function(){
+                alert('The h2 element is clicked')
+            });
+            $('#testbtn').click(function(){
+                alert('The button element is clicked')
+            });
+        })
+    </script>
+</body>
+</html>
