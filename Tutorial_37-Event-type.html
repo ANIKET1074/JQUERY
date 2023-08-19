@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Event Type</title>
+    <style>
+        #box{
+            border: 2px solid olive;
+            background-color: rgb(167, 248, 124);
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JQuery Event Type</h2>
+    <div id="box"></div>
+
+    <h2></h2>
+
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#box').on('click dblclick mouseover mouseout',function(e){
+                $('h2').html("Event: " + e.type)
+            })
+        });
+    </script>
+</body>
+</html>
