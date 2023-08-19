@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Event Target</title>
+    <style>
+        #box{
+            border: 2px solid orange;
+            background-color: bisque;
+            width: 500px;
+            height: 250px;
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JQuery Event Target</h1>
+    <div id="box">
+        <h2>Test box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, recusandae. Nisi pariatur inventore
+            veritatis suscipit nostrum possimus saepe eveniet eligendi!</p>
+
+        <button id="testbtn">Test Button</button>
+    </div>
+    <br>
+    <h3></h3>
+
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#box').on('click',function(e){
+                $('h3').html('Target Element: ' + e.target.nodeName);  
+                // for getting the html use use innerhtml
+                // here we use nodeName for getting the parentnode of the element.
+            })
+        })
+    </script>
+</body>
+
+</html>
