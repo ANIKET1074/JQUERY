@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Page-X & Page-Y</title>
+    <style>
+        #test{
+            border: 2px solid purple;
+            background-color: violet;
+            width: 500px;
+            height: 300px;
+        }
+        #box{
+            border: 2px solid black;
+            background-color: antiquewhite;
+            width: 50px;
+            height: 50px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h2>JQuery Page-X & Page-Y</h2>
+    <div id="test"></div>
+
+    <div id="box"></div>
+    <script src="/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document).mousemove(function(e){
+                $('#test').text('X-Position: '+ e.pageX + ' Y-Position: ' + e.pageY);
+            let x = e.pageX;
+            let y = e.pageY;
+            $('#box').offset({top:y,left:x})
+            });
+        });
+    </script>
+</body>
+</html>
